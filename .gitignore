@@ -3,3 +3,4 @@ _tmp/
 .DS_Store
 .env
 db.*
+products.csv
