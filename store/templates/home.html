@@ -1,0 +1,23 @@
+<h1>Bernini Store</h1>
+{% if user.is_authenticated %}
+    Hello {{ user.username }} | <a href="accounts/logout">Exit</a>
+{% endif %}
+
+<form action="order" method="post" enctype="application/x-www-form-urlencoded">
+    {% csrf_token %}
+    <p>Available products</p>
+    <ul>
+        {% for item in catalogue_list %}
+            <input type="hidden" name="items_keys" value="{{ item.id }}" />
+            <li>{{item.name|title}} <input type="number" name="items_values" max="3" min="0" style="width:40px"></li>
+        {% endfor %}
+    </ul>
+    {% if user.is_authenticated %}
+        <button type="submit">Order</button>
+    {% else %}
+        <a href="accounts/login">Login to order</a>
+    {% endif %}
+
+</form>
+
+

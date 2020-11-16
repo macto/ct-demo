@@ -1,0 +1,26 @@
+[
+  {
+    "fields": {
+      "ean13": "1234567890123",
+      "name": "Bianconero Shoe Man 44",
+      "desc": "...",
+      "price": 99.95,
+      "tax_percent": 21,
+      "in_stock": true
+    },
+    "model": "store.product",
+    "pk": 1
+  },
+  {
+    "fields": {
+      "ean13": "1234567890124",
+      "name": "Profondo Rosso Shoe Woman 37",
+      "desc": "...",
+      "price": 299.95,
+      "tax_percent": 21,
+      "in_stock": true
+    },
+    "model": "store.product",
+    "pk": 2
+  }
+]

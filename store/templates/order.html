@@ -1,0 +1,25 @@
+{% if error is None %}
+    <p>Order created. Complete data and click to save</p>
+    <p>Total amount: {{ price }} €</p>
+
+    <form action="send-order" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="order_id" value="{{ order.id }}" />
+        <p>
+            <label for="address">
+                <textarea name="address"></textarea>
+            </label>
+        </p>
+        <p>
+            <label for="notes">
+                <textarea name="notes"></textarea>
+            </label>
+        </p>
+
+        <p><button type="submit">Send Order</button></p>
+    </form>
+
+{% else %}
+    {{ error }}
+    <p><a href="/">Home</a></p>
+{% endif %}

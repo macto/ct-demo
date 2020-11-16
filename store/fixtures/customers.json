@@ -1,0 +1,15 @@
+[
+  {
+    "fields": {
+      "first_name": "Customer 1",
+      "last_name": "",
+      "email": "customer@example.com",
+      "username": "customer101",
+      "password": "none",
+      "is_active": true,
+      "is_superuser": false
+    },
+    "model": "auth.user",
+    "pk": 1
+  }
+]
